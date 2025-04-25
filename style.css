@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Styles */
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Layout using Flexbox */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-sidebar {
+    flex: 1;
+    background-color: #ccc;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* Tablet (601px to 1024px) */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left-sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .left-sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        width: 65%;
+    }
+}
